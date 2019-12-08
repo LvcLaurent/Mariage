@@ -14,15 +14,18 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
+		<version>2.2.2.RELEASE</version>
 	</parent>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		
 		<midgard-version>0.0.1-SNAPSHOT</midgard-version>
+		
 		<jackson-annotation-version>2.9.9</jackson-annotation-version>
 		<mysql-connector-java-version>8.0.15</mysql-connector-java-version>
+		
 		<mainClass>fr.lsi.mariage.App</mainClass>
 	</properties>
 
@@ -35,13 +38,15 @@
 				<artifactId>jackson-annotations</artifactId>
 				<version>${jackson-annotation-version}</version>
 			</dependency>
-			
+
 			<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql-connector-java-version}</version>
 			</dependency>
+
+			
 		</dependencies>
 	</dependencyManagement>
 
@@ -60,18 +65,9 @@
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
-					<!-- <version>2.1.5.RELEASE</version>
-					<configuration>
-						<mainClass>fr.lsi.midgardro.App</mainClass>
-						<layout>ZIP</layout>
-					</configuration>
-					<executions>
-						<execution>
-							<goals>
-								<goal>repackage</goal>
-							</goals>
-						</execution>
-					</executions> -->
+					<!-- <version>2.1.5.RELEASE</version> <configuration> <mainClass>${mainClass}</mainClass> 
+						<layout>ZIP</layout> </configuration> <executions> <execution> <goals> <goal>repackage</goal> 
+						</goals> </execution> </executions> -->
 				</plugin>
 			</plugins>
 		</pluginManagement>
