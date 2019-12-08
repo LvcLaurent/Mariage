@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @author Laurent SION
@@ -15,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("fr.lsi.mariage")
 @SpringBootApplication
 @EnableAutoConfiguration
+@PropertySource("file:/home/laurent/Public/resources/application.yml")
 @EntityScan("fr.lsi.mariage")
 public class App{
 
