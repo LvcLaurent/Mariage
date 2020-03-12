@@ -1,75 +1,813 @@
+<!DOCTYPE html>
 <html>
-    <head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Site pour le Mariage de Pauline et Laurent">
+		<title>Pauline & Laurent</title>
+		<link rel="shortcut icon" href="images/favicon.png">
 
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>Laurent & Pauline - Construit leur site</title>
+		<!-- Pace Loader -->
+		<script src="js/pace.min.js"></script>
+  		<link href="css/pace.css" rel="stylesheet" />
 
-        <!-- BootStrap -->
-        <link rel="stylesheet" href="css/Librairie/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/Librairie/mdb.min.css" />
-        <link rel="stylesheet" href="css/Librairie/style.css" />
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
 
-        <!-- JS, Popper.js, Bootstrap, and jQuery -->
-        <script src="js/Librairie/jquery.min.js" ></script>
-        <script src="js/Librairie/bootstrap.min.js" ></script>
-        <script src="js/Librairie/mdb.min.js" ></script>
-        <script src="js/Librairie/popper.min.js" ></script>
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
 
-        <!-- Main Script -->
-        <script type="text/javascript" src="js/IndexConstruction.js"></script>
-        <link rel="stylesheet" href="css/indexConstruction.css" />
+		<!-- Countdown CSS -->
+		<link href="css/countdown.css" rel="stylesheet">
 
-        <!-- Librairie -->
-        <script type="text/javascript" src="js/Librairie/jR3DCarousel.min.js"></script>
-    </head>
-    <body>
+		<!-- Owl Carousel stylesheet -->
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
 
-            
-        
-        <!-- Jumbotron --> 
-        <div class="jumbotron p-0">
+		<!-- Owl Carousel Default Theme -->
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
 
-            <!-- Card image -->
-            <div class="view overlay rounded-top">
-                <img src="img/jumbotron/banniere.jpg" class="text-center img-fluid" alt="Sample image">
-                <a href="#">
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-        
-            <!-- Card content -->
-            <div class="card-body text-center mb-3">
-        
-                <!-- Title -->
-                <h3 class="card-title h3 my-4"><strong>Laurent & Pauline</strong></h3>
-                <!-- Text -->
-                <p class="card-text py-2">Mariage : Site en contruction <br />
-                    Version : 0.0.1
-                </p>
-                <!-- Button -->
-                <!-- <a href="#" class="btn purple-gradient btn-rounded mb-4">Button</a> -->
-        
-            </div>
-            <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <div class="login-container">
-                    <form action="">
-                        <input type="text" placeholder="Username" name="username">
-                        <input type="text" placeholder="Password" name="psw">
-                        <button type="submit">Login</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- Jumbotron FIN -->
+		<!-- Animate CSS -->
+		<link href="css/animate.css" rel="stylesheet">
 
-     
+		<!-- Fancybox -->
+		<link href="css/jquery.fancybox.css" rel="stylesheet">
 
-        <div class="container">
-                <div class="jR3DCarouselGallery"></div>
-                <br /> <br />
-                <br /> <br />
-    </body>
+		<!-- Google Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Serif%7CEngagement%7COpen+Sans:800" rel="stylesheet">
+
+		<!-- Font Awesome Icons -->
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css" rel="stylesheet">
+
+		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+		<!-- ========== MENU START ========== -->
+
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="images/logo_2.png" alt="Perfect Couple. Single page responsive wedding site theme." class="img-responsive" /></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#about">A propos</a></li>
+						<li><a href="#story">Notre Histoire</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gens <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="index.html#people">Personne importante</a></li>
+								<li><a href="laurent.html">Laurent</a></li>
+								<li><a href="pauline.html">Pauline</a></li>
+							</ul>
+						</li>
+						<li><a href="#events">Événements</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="gallery/photos.html">Gallery</a></li>
+						<li><a href="index.html#location">lieux</a></li>
+						<li><a href="validation.html">Validation Présence</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- ========== MENU END ========== -->
+
+		<div class="container">
+
+			<!-- ========== BANNER START ========== -->
+
+			<div id="slides">
+				<div class="slides-container">
+					<img src="images/Couple/IMG_2044.JPG" alt="" />
+					<img src="images/Couple/DSC00207.JPG" alt="" />
+					<img src="images/Couple/IMG_2045.JPG" alt="" />
+					<img src="images/Couple/DSC00019.JPG" alt="" />
+				</div>
+				<div class="tint">
+					<div class="welcome text-center" data-scroll-reveal="enter from the top after 2s">
+						<h1>Pauline &amp; Laurent</h1>
+						<p>vont se marier</p>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+						<p>Septembre 26th, 2020</p>
+					</div>
+				</div>
+				<div class="countdown" data-scroll-reveal="enter from the bottom after 2.5s"></div>
+			</div>
+
+			<!-- ========== BANNER END ========== -->
+
+			<!-- ========== ABOUT US START ========== -->
+
+			<section id="about" class="text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>A propos de nous</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6" data-scroll-reveal="enter from the left">
+						<a href="laurent.html" class="hover-effect">
+							<img src="images/Laurent/IMGP2866.JPG" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<h5>Laurent Sion</h5>
+						<p>HAHAHAHA il est surement sur minecraft en compagnie d'un creeper</p>
+						<ul class="social-icons">
+							<li><a href="http://facebook.com/lsion" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com/LvcLaurent" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-6" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="pauline.html" class="hover-effect">
+							<img src="images/Pauline/20180402_150911.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<h5>Pauline Trigault</h5>
+						<p>Elle est surement dans le jardin à planter des choux, à la mode de chez elle</p>
+						<ul class="social-icons">
+							<li><a href="http://facebook.com/pauline.trigault" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- ========== ABOUT US END ========== -->
+
+			<!-- ========== OUR STORY START ========== -->
+
+			<section id="story" style="background: #faf9f5;" class="text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Une histoire d'amour</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="Articles/la_rencontre.html" class="hover-effect">
+							<img src="images/Couple/lolopopo.png" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<h6>La rencontre</h6>
+						<p>Dans ton cul au fond a droite</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-4" data-scroll-reveal>
+						<a href="Articles/post.html" class="hover-effect">
+							<img src="images/pageEnConstruction.png" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<h6>Premier rendez vous</h6>
+						<p>Dans un sexe shop à Valenciennes</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-4" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="Articles/post.html" class="hover-effect">
+							<img src="images/pageEnConstruction.png" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<h6>Engagement</h6>
+						<p>Engagement</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12" data-scroll-reveal>
+						<p>&nbsp;</p>
+						<a href="blog.html" class="btn btn-lg btn-primary">Pour plus d'histoire</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ========== OUR STORY END ========== -->
+
+			<!-- ========== PEOPLE START ========== -->
+
+			<section id="people">
+				<div class="row">
+					<div class="col-sm-12 heading text-center" data-scroll-reveal>
+						<h2>Témoins & Frères</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Guillaume Szymanski</h5>
+						<h6>Temoin</h6>
+						<p>Des putains de conneries ....</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="laurent.html" class="hover-effect">
+							<img src="images/Guillaume.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="pauline.html" class="hover-effect">
+							<img src="images/Elodie.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Elodie Cressin</h5>
+						<h6>Bubule</h6>
+						<p> va surement se réincarner en bouteille de champagne !!!</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Charles SION</h5>
+						<h6>Frèrot</h6>
+						<p> Euh si les parents savaient tous ce qu'on à pu faire ... on serai certainement plus de se monde</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="pauline.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="laurent.html" class="hover-effect">
+							<img src="images/Aurore.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Aurore Andrief</h5>
+						<h6>Buveuse De ZERO</h6>
+						<p> Quand elle est partie on ne l'arrète plus. </p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Samuel Goudsmedt</h5>
+						<h6>Un dinosaure</h6>
+						<p>La où Sam passe ton frigo trépasse !</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="pauline.html" class="hover-effect">
+							<img src="images/Sam.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="laurent.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Loic Trigault</h5>
+						<h6>Surnom</h6>
+						<p> text </p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Vincent Sion</h5>
+						<h6>Frèrot </h6>
+						<p>text</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="pauline.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="laurent.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Xavier Trigault</h5>
+						<h6>Surnom </h6>
+						<p>text</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ========== PEOPLE END ========== -->
+
+			<!-- ========== EVENTS START ========== -->
+
+			<section id="events" style="background: #faf9f5;" class="text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Evenements &amp; Soirées</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4" data-scroll-reveal>
+						<div class="blog-short">
+							<img src="images/pageEnConstruction.png" class="img-responsive" alt="" />
+							<h5>Préparation de la future mariée </h5>
+							<h6>fev, 22th 2020</h6>
+							<p>c'est moi qui fait le site et je ne sais pas du tout ce qu'il se passe alors faite pas chier et demandé à Pauline.</p>
+							<p><a href="Articles/post.html" class="btn btn-primary">Plus d'information</a></p>
+						</div>
+					</div>
+					<div class="col-sm-4" data-scroll-reveal="enter from the left after 0.25s">
+						<div class="blog-short">
+							<img src="images/EvAVenir.jpg" class="img-responsive" alt="" />
+							<h5>EVJH Laurent</h5>
+							<h6>Juillet ?th, 2020</h6>
+							<p>je pourrais le noter mnt je m'en souviendrais pas je pense</p>
+							<p><a href="Articles/post.html" class="btn btn-primary">Plus d'information</a></p>
+						</div>
+					</div>
+					<div class="col-sm-4" data-scroll-reveal="enter from the right after 0.5s">
+						<div class="blog-short">
+							<img src="images/EvAVenir.jpg" class="img-responsive" alt="" />
+							<h5>EVJf Pauline</h5>
+							<h6>Juillet ?th, 2020</h6>
+							<p>je pourrais le noter mnt je m'en souviendrais pas je pense</p>
+							<p><a href="Articles/post.html" class="btn btn-primary">Plus d'information</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ========== EVENTS END ========== -->
+
+			<!-- ========== ACOOMMODATION START ========== -->
+
+			<!-- <section id="accommodation">
+				<div class="row">
+					<div class="col-sm-12 heading text-center" data-scroll-reveal>
+						<h2>Accommodation</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>The Savoy Hotel</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>The Marriott Hotel</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>The hilton Hotel</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>The Kempinsky Hotel</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+			</section> -->
+
+			<!-- ========== ACCOMMODATION END ========== -->
+
+			<!-- ========== FUN FACTS START ========== -->
+
+			<section id="facts">
+	        	<div class="parallax" data-velocity="-.4"></div>
+				<div class="text-center">
+					<div class="row">
+						<div class="col-sm-12 heading" data-scroll-reveal>
+							<h2>Fun Facts</h2>
+							<p><span></span><i class="fa fa-heart"></i><span></span></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3 col-xs-6" data-scroll-reveal="enter from the left">
+							<div class="img-circle">
+								<h3 class="timer" data-from="0" data-to="18"></h3>
+								<h6>Robes essayées</h6>
+							</div>
+						</div>
+						<div class="col-sm-3 col-xs-6" data-scroll-reveal="enter from the top after 0.25s">
+							<div class="img-circle">
+								<h3 class="timer" data-from="0" data-to="0"></h3>
+								<h6>Costume Essayé</h6>
+							</div>
+						</div>
+						<div class="col-sm-3 col-xs-6" data-scroll-reveal="enter from the bottom after 0.5s">
+							<div class="img-circle">
+								<h3 class="timer" data-from="0" data-to="4"></h3>
+								<h6>Changements de thème</h6>
+							</div>
+						</div>
+						<div class="col-sm-3 col-xs-6" data-scroll-reveal="enter from the right after 0.75s">
+							<div class="img-circle">
+								<h3 class="timer" data-from="0" data-to="45"></h3>
+								<h6>Cafés Pris</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ========== FUN FACTS END ========== -->
+
+			<!-- ========== BLOG START ========== -->
+
+			<!--<section id="blog" style="background: #faf9f5;" class="text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Blog</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4" data-scroll-reveal="enter from the left after 0.25s">
+						<div class="blog-short">
+							<img src="http://placehold.it/370x260.jpg" class="img-responsive" alt="" />
+							<h5>Histoire 1</h5>
+							<h6>date</h6>
+							<p>Commentaire</p>
+							<p><a href="" class="btn btn-primary">Plus d'info</a></p>
+						</div>
+					</div>
+					<div class="col-sm-4" data-scroll-reveal>
+						<div class="blog-short">
+							<img src="http://placehold.it/370x260.jpg" class="img-responsive" alt="" />
+							<h5>Histoire 2</h5>
+							<h6>date</h6>
+							<p>Commentaire</p>
+							<p><a href="" class="btn btn-primary">Plus d'info</a></p>
+						</div>
+					</div>
+					<div class="col-sm-4" data-scroll-reveal="enter from the right after 0.5s">
+						<div class="blog-short">
+							<img src="http://placehold.it/370x260.jpg" class="img-responsive" alt="" />
+							<h5>Histoire 3</h5>
+							<h6>date</h6>
+							<p>Commentaire</p>
+							<p><a href="" class="btn btn-primary">Plus d'info</a></p>
+						</div>
+					</div>
+				</div>
+			</section>-->
+
+			<!-- ========== BLOG END ========== -->
+
+			<!-- ========== LOCATION START ========== -->
+
+			<section id="location">
+				<br /><br /><br /><br />
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Château De La Motte Fénelon</h5>
+						<h6>Square du Val du Chateau, <br />59400 Cambrai</h6>
+						<p>Remerciment, vin d'honneur et Repas</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="http://www.cambrai-chateau-motte-fenelon.com/" class="hover-effect">
+							<img src="images/chateau.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="https://www.tourisme-cambresis.fr/eglise-saint-gery.html" class="hover-effect">
+							<img src="images/eglise.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Église Saint-Géry</h5>
+						<h6>8 Place François de Fénelon,<br /> 59400 Cambrai</h6>
+						<p>Cérémonie catholique</p>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+					</div>
+				</div>
+
+				<!-- Google Map Script -->
+				<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYFPjmfoEaXl7KELQXAfC3qaHAjrufpnw&amp;sensor=false"></script>
+				<script type="text/javascript">
+
+					function initialize() {
+
+						// Create an array of styles.
+						var styles = [
+							{
+							"stylers": [
+								{ "saturation": -100 },
+								{ "gamma": 1 }
+							]
+							},{
+								"featureType": "water",
+								"stylers": [
+									{ "lightness": -12 }
+								]
+							}
+						];
+
+						// Create a new StyledMapType object, passing it the array of styles,
+						// as well as the name to be displayed on the map type control.
+						var styledMap = new google.maps.StyledMapType(styles,
+						{name: "Styled Map"});
+
+						var mapOptions = {
+							scrollwheel: false,
+							zoom: 12,
+							center: new google.maps.LatLng(50.191738, 3.243466),
+							mapTypeControlOptions: {
+								mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+							}
+						}
+						var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+						//Associate the styled map with the MapTypeId and set it to display.
+						map.mapTypes.set('map_style', styledMap);
+						map.setMapTypeId('map_style');
+
+						setMarkers(map, places);
+					}
+
+					var places = [
+						['Château De La Motte Fénelon<br>Square du Val du Chateau<br>59400 Cambrai', 50.1917861, 3.2436165, 15],
+						['Église catholique Saint-Géry<br>8 Place François de Fénelon<br>Havana, 59400 Cambrai', 50.1759051, 3.2342406, 15]
+					];
+
+					function setMarkers(map, locations) {
+						// Add markers to the map
+						var image = {
+							url: 'images/map-marker.png',
+							// This marker is 40 pixels wide by 42 pixels tall.
+							size: new google.maps.Size(62, 58),
+							// The origin for this image is 0,0.
+							origin: new google.maps.Point(0,0),
+							// The anchor for this image is the base of the pin at 20,42.
+							anchor: new google.maps.Point(20, 58)
+						};
+
+						var infowindow = new google.maps.InfoWindow();
+
+						var marker, i;
+						var markers = new Array();
+
+						for (var i = 0; i < locations.length; i++) {
+							var place = locations[i];
+							var myLatLng = new google.maps.LatLng(place[1], place[2], place[3]);
+							var marker = new google.maps.Marker({
+								position: myLatLng,
+								map: map,
+								icon: image,
+								title: place[0],
+								zIndex: place[3],
+								animation: google.maps.Animation.DROP
+							});
+
+							markers.push(marker);
+
+							google.maps.event.addListener(marker, 'click', (function(marker, i) {
+								return function() {
+									infowindow.setContent(locations[i][0]);
+									infowindow.open(map, marker);
+								}
+							})(marker, i));
+						}
+					}
+
+					google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+
+
+				<div id="map-canvas"></div>
+
+				<!-- ========== LOCATION END ========== -->
+
+				<!-- ========== RSVP START ========== -->
+
+				<!--<div id="rsvp" class="text-center" data-scroll-reveal>
+					<div class="heading">
+						<h2>RSVP</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+					<form role="form" name="contactform" action="process.php">
+						<div class="row">
+							<div id="name-group" class="form-group col-xs-12">
+								<label for="inputName">Name</label>
+								<input type="text" class="form-control" id="inputName" name="inputName" placeholder="John Doe">
+							</div>
+						</div>
+						<div class="row">
+							<div id="email-group" class="form-group col-xs-12">
+								<label for="inputEmail">Email</label>
+								<input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="name@domain.com">
+							</div>
+						</div>
+						<div class="row">
+							<div id="guests-group" class="form-group col-xs-6">
+								<label for="selectGuests">Guests</label>
+								<select class="form-control" name="selectGuests" id="selectGuests">
+									<option value="1" selected>1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</div>
+							<div id="attending-group" class="form-group col-xs-6">
+								<label for="selectAttending">I am attending...</label>
+								<select class="form-control" name="selectAttending" id="selectAttending">
+									<option value="All Events" selected>All Events</option>
+									<option value="Ceremony">Ceremony</option>
+									<option value="Reception">Reception</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<button type="submit" class="btn btn-lg">I'm attending</button>
+						</div>-->
+					</form>
+				</div>
+
+				<!-- ========== RSVP END ========== -->
+
+			</section>
+
+			<!-- ========== REGISTRY START ========== -->
+
+			<!--<section id="registry" class="text-center">
+				<div class="row">
+					<div class="col-sm-12" data-scroll-reveal>
+						<p>We are registered at</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 owl-carousel" data-scroll-reveal>
+						<div class="item">
+							<a href=""><span></span><img src="http://placehold.it/130x50.png" class="img-responsive" alt="" /></a>
+						</div>
+						<div class="item">
+							<a href=""><span></span><img src="http://placehold.it/130x50.png" class="img-responsive" alt="" /></a>
+						</div>
+						<div class="item">
+							<a href=""><span></span><img src="http://placehold.it/130x50.png" class="img-responsive" alt="" /></a>
+						</div>
+						<div class="item">
+							<a href=""><span></span><img src="http://placehold.it/130x50.png" class="img-responsive" alt="" /></a>
+						</div>
+						<div class="item">
+							<a href=""><span></span><img src="http://placehold.it/130x50.png" class="img-responsive" alt="" /></a>
+						</div>
+						<div class="item">
+							<a href=""><span></span><img src="http://placehold.it/130x50.png" class="img-responsive" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</section>-->
+
+			<!-- ========== REGISTRY END ========== -->
+
+			<!-- ========== FOOTER START ========== -->
+
+			<footer>
+				<div class="row text-center">
+					<div class="col-sm-12" data-scroll-reveal>
+						&copy; 2020 Couple Parfait - Site Theme by @Laurent</a>
+					</div>
+					<audio controls autoplay>
+						<source src="musique/Musique Site.mp3" type="audio/mpeg">
+						Votre navigateur ne supporte pas la balise audio.
+					</audio>
+				</div>
+			</footer>
+
+		<!-- ========== FOOTER END ========== -->
+
+		</div>
+
+		<!-- Modernizr Plugin -->
+		<script src="js/modernizr.custom.97074.js"></script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-1.10.2.min.js"></script>
+
+		<!-- Bootstrap Plugins -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Retina Plugin -->
+		<script src="js/retina-1.1.0.min.js"></script>
+
+		<!-- Countdown Plugin -->
+		<script src="js/jquery.plugin.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+
+		<!-- Scrolly Plugin -->
+		<script src="js/jquery.scrolly.js"></script>
+
+		<!-- CountTo Plugin -->
+		<script src="js/jquery.countTo.js"></script>
+
+		<!-- Owl Carousel Plugin -->
+		<script src="js/owl.carousel.min.js"></script>
+
+		<!-- Fancybox Plugin -->
+		<script src="js/jquery.fancybox.js"></script>
+
+		<!-- RSVP Form Processing -->
+		<script src="js/magic.js"></script>
+
+		<!-- Scroll Reveal Plugin -->
+		<script src="js/scrollReveal.js"></script>
+
+		<!-- jQuery Settings -->
+		<script src="js/settings.js"></script>
+
+
+	</body>
 </html>

@@ -1,4 +1,4 @@
-package fr.lsi.mariage;
+package fr.lsi.mariage.exposition;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author Laurent SION
@@ -16,7 +17,7 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan("fr.lsi.mariage")
 @SpringBootApplication
 @EnableAutoConfiguration
-@PropertySource("file:/home/laurent/Public/resources/application.yml")
+@EnableSwagger2
 @EntityScan("fr.lsi.mariage")
 public class App{
 

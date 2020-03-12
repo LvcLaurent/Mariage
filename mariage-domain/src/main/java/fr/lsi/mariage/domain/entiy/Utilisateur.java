@@ -1,4 +1,4 @@
-package fr.lsi.mariage.entiy;
+package fr.lsi.mariage.domain.entiy;
 
 import java.time.LocalDate;
 
@@ -7,8 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name="UTILISATEUR")
-public class Utilisateur {
+public class Utilisateur implements IoEntity{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7930573976254302322L;
+
 	/**
 	 * Id unique de l'utilisateur
 	 */
