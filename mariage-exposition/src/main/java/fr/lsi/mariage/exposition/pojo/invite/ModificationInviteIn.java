@@ -11,6 +11,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModificationInviteIn {
 	
 	/**
+	 * code Admin
+	 */
+	@JsonProperty("admin")
+	private String codeAdmin;
+	
+	/**
 	 * uuid de domicile
 	 */
 	@JsonProperty("uuid")
@@ -374,6 +380,24 @@ public class ModificationInviteIn {
 	 */
 	public final void setUuid(String uuid) {
 		this.uuid = uuid;
+	}
+
+
+
+	/**
+	 * @return the codeAdmin
+	 */
+	public final String getCodeAdmin() {
+		return codeAdmin;
+	}
+
+
+
+	/**
+	 * @param codeAdmin the codeAdmin to set
+	 */
+	public final void setCodeAdmin(String codeAdmin) {
+		this.codeAdmin = codeAdmin;
 	}
 	
 	

@@ -1,6 +1,5 @@
 // admin.js
-$(document).ready(function() {
-
+function majTab() {
     var urlAll ='../invite/all'
 
     $.ajax({
@@ -8,13 +7,10 @@ $(document).ready(function() {
         contentType: "application/json",
         dataType: 'json',
         success: function(result){
-            console.log(result);
-            var tableau = "<table class=\"table\"><thead><tr><th>adresse</th><th>code postal</th><th>ville</th><th>Mr/Mme</th><th>Action</th></tr></thead><tbody>";
-            console.log(tableau)
+            var tableau = "<table class=\"table\"><thead><tr><th>adresse</th><th>code postal</th><th>ville</th><th>Mr/Mme</th><th>Reponse</th><th>Action</th></tr></thead><tbody>";
             var row = "";
 
             for (var i = 0; i < result.length; i += 1){
-                console.log(i);
                 row="";
                 
                 var adresse = result[i]['adresse'];
@@ -64,13 +60,16 @@ $(document).ready(function() {
                 codePostal = "<td>" + codePostal + "</td>";
                 ville = "<td>" + ville + "</td>";
                 prenom = "<td>" + prenom + "</td>";
-                action = "<td><a href=\""+urlModification+"\" > <img src=\"../images/key-24-211406.png\" alt=\"\" /></a></td>";
-                row += adresse + codePostal +ville+prenom+action+"</tr>";
+                if(result[i]['reponse']== false){
+                    reponse = "<td>" + "<img src=\"../images/X_rouge.png\" alt=\"\" />" + "</td>";
+                }else{
+                    reponse = "<td>" + "<img src=\"../images/V_vert.png\" alt=\"\" />" + "</td>";
+                }
+                action = "<td><a href=\""+urlModification+"\" > <img src=\"../images/key-24-211406.png\" alt=\"\" /></a><a onClick=\"supression('"+result[i]['codeUID']+"');\" > <img  src=\"../images/30120.png\" alt=\"\" /></a></td>";
+                row += adresse + codePostal +ville+prenom+reponse+action+"</tr>";
                 tableau += row ;
-                console.log(tableau)
                 if(i === result.length-1) {
                     tableau += "</tbody></table>";
-                    console.log(tableau)
                     $('#Donnee').html(tableau);
                 }
             };
@@ -79,4 +78,33 @@ $(document).ready(function() {
         }
     });
 
+}
+
+function supression(uuid) {
+    var urlSup ='../invite/supression'
+
+    var admin = prompt("Mot de passe :");
+    
+    $.ajax({
+        type: "POST",
+        url: urlSup,
+        contentType : 'application/json',
+        dataType: 'json',
+        data: '{"admin": "'+admin+'","uuid": "' + uuid +'"}',
+        success: function(){
+            majTab()
+        },
+        error: function (data) {
+            alert( data['responseJSON']['code'] + " : " + data['responseJSON']['message'] + ", " + data['responseJSON']['info']);
+        }
+    });
+
+}
+
+$(document).ready(function() {
+
+    majTab();
+
+    
 });
+

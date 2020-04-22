@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import fr.lsi.mariage.domain.constante.ConstanteInfrastructure;
 import fr.lsi.mariage.domain.entiy.DomicileEntity;
-import fr.lsi.mariage.domain.entiy.InviteEntity;
 import fr.lsi.mariage.domain.exception.MariageException;
 import fr.lsi.mariage.domain.exception.MariageFonctionelleException;
 import fr.lsi.mariage.domain.repository.AbstractJpaRepository;
@@ -88,6 +87,56 @@ public class DomicileRepository extends AbstractJpaRepository<DomicileEntity> im
 		String hql = "from DomicileEntity d ";
 		try {
 			LOGGER.info("requète sur tout la base");
+			ArrayList<DomicileEntity> result = (ArrayList<DomicileEntity>) em.createQuery(hql).getResultList();
+			return result;
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
+	
+	@Transactional
+	@Override
+    public DomicileEntity save(DomicileEntity entity) throws MariageException {
+        if (isNew(entity)) {
+        	LOGGER.info("persist");
+            em.persist(entity);
+            return entity;
+        } else if (!em.contains(entity)) {
+        	LOGGER.info("merge");
+            return em.merge(entity);
+        }
+
+        return entity;
+    }
+
+	@Override
+	@Transactional
+	public void suppressionByUuid(String uuid) {
+		DomicileEntity entity = this.getByUuid(uuid);
+		LOGGER.info("supression du domicile");
+		this.delete(entity);
+		
+	}
+
+	@Override
+	public DomicileEntity rechercheParInvite(final String uidPortail) throws MariageException {
+		String hql = "from DomicileEntity d "
+				+ "where d.habitant1.codeEnregistrement = '"+uidPortail+"'";
+		try {
+			LOGGER.info("Recherche si le code portail est en base");
+			DomicileEntity result = (DomicileEntity) em.createQuery(hql).getSingleResult();
+			return result;
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
+
+	@Override
+	public ArrayList<DomicileEntity> getOublieInvitation() throws MariageException {
+		String hql = "from DomicileEntity d "
+				+ "where d.invitationExp=false";
+		try {
+			LOGGER.info("Recherche des adresses sans validation");
 			ArrayList<DomicileEntity> result = (ArrayList<DomicileEntity>) em.createQuery(hql).getResultList();
 			return result;
 		} catch (NoResultException e) {

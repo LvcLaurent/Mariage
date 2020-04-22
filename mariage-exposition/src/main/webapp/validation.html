@@ -18,10 +18,10 @@
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- Owl Carousel stylesheet -->
-		<link href="css/owl.carousel.css" rel="stylesheet">
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
 
 		<!-- Owl Carousel Default Theme -->
-		<link href="css/owl.theme.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
 
 		<!-- Fancybox -->
 		<link href="css/jquery.fancybox.css" rel="stylesheet">
@@ -58,16 +58,15 @@
 						<li><a href="index.html#about">A propos</a></li>
 						<li><a href="index.html#story">Notre Histoire</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gens <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Personne <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="index.html#people">Personne importante</a></li>
+								<li><a href="index.html#people">Personnes importantes</a></li>
 								<li><a href="laurent.html">Laurent</a></li>
 								<li><a href="pauline.html">Pauline</a></li>
 							</ul>
 						</li>
 						<li><a href="index.html#events">Événements</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="gallery/photos.html">Gallery</a></li>
+						<li><a href="gallery/photos.html">Photos</a></li>
 						<li><a href="index.html#location">lieux</a></li>
 						<li><a href="validation.html">validation</a></li>
 					</ul>
@@ -83,6 +82,16 @@
 
 			<section>
 
+				<!-- POST START -->
+				<div class="row">
+					<div class="col-sm-12" data-scroll-reveal>
+						<p data-scroll-reveal><img src="images/portail.jpg" class="img-responsive img-rounded" alt="" /></p>
+					</div>
+				</div>
+
+
+						
+
 				<div class="row">
 					<div class="col-sm-12 heading text-center" data-scroll-reveal>
 						<h2>Portail Magique de réponse</h2>
@@ -93,37 +102,54 @@
 				<!-- POST START -->
 				<div class="row">
 					<div class="col-sm-12" data-scroll-reveal>
-						<p class="post-meta text-center">
-							<span><i class="fa fa-calendar"></i>April 27th, 2014</span>
-							<span><i class="fa fa-folder"></i>Events &amp; Parties</span>
-						</p>
-						<p data-scroll-reveal><img src="http://placehold.it/1170x500.jpg" class="img-responsive img-rounded" alt="" /></p>
-						<p>Formulaire de réponse</p>
+						<h2>Formulaire de réponse</h2>
 						<form role="form">
 							<div class="row" data-scroll-reveal>
 								<div class="form-group col-sm-6">
-									<input type="text" class="form-control" id="input-name" placeholder="Code d'activation">
+									<input type="text" class="form-control" id="code" placeholder="Code d'activation">
+								</div>
+								<div class="form-group col-sm-2">
+									<label id="uuid" class="btn btn-primary">Cherche</label>
 								</div>
 							</div>
-							<div class="row" data-scroll-reveal>
-								<div class="form-group col-sm-12">
-									<textarea class="form-control" rows="5"></textarea>
+							<div id="formReponse">
+								<div class="row" data-scroll-reveal>
+									<div class="form-group col-sm-12">
+										<h2 id="personne"></h2>
+									</div>
+								</div>
+								<div class="row" data-scroll-reveal>
+									<div class="form-group col-sm-6">
+										<p id="personnel"></p>
+									</div>
+								</div>
+								<div class="row" data-scroll-reveal>
+									<div class="form-group col-sm-12">
+										<textarea id="commentaire" class="form-control" rows="5" placeholder="Ecrivez nous un commentaire"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">Présent au vin d'honneur :</label>
+									<select class="form-control" id="repasVin">
+										<option>Oui</option>
+										<option>Non</option>
+									</select>
+									</div>
+								
+							</div>
+							<div id="invitationRepasForm">
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">Présent au repas :</label>
+									<select class="form-control" id="repasReponse">
+									<option>Oui</option>
+									<option>Non</option>
+									</select>
 								</div>
 							</div>
-							<div class="row" data-scroll-reveal>
-								<div class="form-group col-sm-12 text-center">
-									<button type="submit" class="btn btn-lg btn-primary">Submit</button>
-								</div>
+							<div id="btnValider">
+								<label id="valider" class="btn btn-primary">Valider</label>
 							</div>
 						</form>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-6" data-scroll-reveal="enter from the left">
-						<a href="" class="btn btn-primary btn-lg"><i class="fa fa-chevron-left"></i></a>
-					</div>
-					<div class="col-xs-6 text-right" data-scroll-reveal="enter from the right after 0.25s">
-						<a href="" class="btn btn-primary btn-lg"><i class="fa fa-chevron-right"></i></a>
 					</div>
 				</div>
 				<!-- POST END -->
@@ -159,7 +185,7 @@
 		<script src="js/retina-1.1.0.min.js"></script>
 
 		<!-- Owl Carousel Plugin -->
-		<script src="js/owl.carousel.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
 
 		<!-- Fancybox Plugin -->
 		<script src="js/jquery.fancybox.js"></script>
@@ -169,6 +195,9 @@
 
 		<!-- jQuery Settings -->
 		<script src="js/settings-inner.js"></script>
+
+		<!-- portail javascript -->
+		<script src="js/portail.js"></script>
 
 
 	</body>

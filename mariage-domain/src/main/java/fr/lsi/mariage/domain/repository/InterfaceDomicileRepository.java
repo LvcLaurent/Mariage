@@ -3,9 +3,8 @@ package fr.lsi.mariage.domain.repository;
 import java.util.ArrayList;
 
 import fr.lsi.mariage.domain.entiy.DomicileEntity;
+import fr.lsi.mariage.domain.entiy.InviteEntity;
 import fr.lsi.mariage.domain.exception.MariageException;
-import fr.lsi.mariage.domain.exception.MariageFonctionelleException;
-import fr.lsi.mariage.domain.model.Domicile;
 
 /**
  * Interface pour les actions que nous effecturons en base de données
@@ -55,5 +54,31 @@ public interface InterfaceDomicileRepository {
 	 * @return
 	 */
 	ArrayList<DomicileEntity> allDomicile();
+
+	/**
+	 * supression d'un groupe d'invité
+	 * 
+	 * @param uuid
+	 */
+	void suppressionByUuid(final String uuid);
+	
+	/**
+	 * Recherche Domicile via l'invité numéro 1
+	 * 
+	 * @param uidPortail
+	 * @return
+	 * @throws MariageException
+	 */
+	DomicileEntity rechercheParInvite(final String uidPortail) throws MariageException;
+
+
+	
+	/**
+	 * Recherche Domicile via l'invité numéro 1
+	 * 
+	 * @return
+	 * @throws MariageException
+	 */
+	ArrayList<DomicileEntity> getOublieInvitation() throws MariageException;
 
 }

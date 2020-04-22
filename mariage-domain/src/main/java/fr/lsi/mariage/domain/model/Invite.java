@@ -32,59 +32,25 @@ public class Invite {
 	private String surnom;
 	
 	/**
-	 * table choisie
-	 */
-	private String table;
-	
-	/**
-	 * présent au repas
-	 */
-	private Boolean presenceRepas;
-	
-	
-	/**
-	 * présent au Vin d'honneur
-	 */
-	private Boolean PresenceVin;
-	
-	/**
-	 * si il est invité au repas
-	 */
-	private Boolean inviteRepas;
-	
-	/**
 	 * Création de l'invite
 	 * 
 	 * @param nom nom de l'invite
 	 * @param prenom prenom de l'invite
 	 * @param inviteRepas vrai pour le cas ou il est invité
 	 */
-	public Invite(final String nom, final String prenom, final boolean inviteRepas) {
+	public Invite(final String nom, final String prenom) {
 		UUID uuid = UUID.randomUUID();
 		this.setCodeUID(uuid.toString());
 		this.setCodeEnregistrement(uuid.toString().substring(0, 7));
 		this.setNom(nom);
 		this.setPrenom(prenom);
-		this.setInviteRepas(inviteRepas);
-		
-		if(inviteRepas) {
-			this.setPresenceVin(Boolean.TRUE);
-			this.setPresenceRepas(Boolean.TRUE);
-		} else {
-			this.setPresenceVin(Boolean.TRUE);
-			this.setPresenceRepas(Boolean.FALSE);
-		}
 	}
 	
 	public Invite(final InviteEntity invite) {
 		this.setCodeUID(invite.getCodeUID());
-		this.setInviteRepas(invite.getInviteRepas());
 		this.setNom(invite.getNom());
 		this.setPrenom(invite.getPrenom());
-		this.setPresenceRepas(invite.getPresenceRepas());
-		this.setPresenceVin(invite.getPresenceVin());
 		this.setSurnom(invite.getSurnom());
-		this.setTable(invite.getTable());
 		this.setCodeEnregistrement(invite.getCodeEnregistrement());
 	}
 
@@ -128,62 +94,6 @@ public class Invite {
 	 */
 	public final void setSurnom(String surnom) {
 		this.surnom = surnom;
-	}
-
-	/**
-	 * @return the table
-	 */
-	public final String getTable() {
-		return table;
-	}
-
-	/**
-	 * @param table the table to set
-	 */
-	public final void setTable(String table) {
-		this.table = table;
-	}
-
-	/**
-	 * @return the presenceRepas
-	 */
-	public final Boolean getPresenceRepas() {
-		return presenceRepas;
-	}
-
-	/**
-	 * @param presenceRepas the presenceRepas to set
-	 */
-	public final void setPresenceRepas(Boolean presenceRepas) {
-		this.presenceRepas = presenceRepas;
-	}
-
-	/**
-	 * @return the presenceVin
-	 */
-	public final Boolean getPresenceVin() {
-		return PresenceVin;
-	}
-
-	/**
-	 * @param presenceVin the presenceVin to set
-	 */
-	public final void setPresenceVin(Boolean presenceVin) {
-		PresenceVin = presenceVin;
-	}
-
-	/**
-	 * @return the inviteRepas
-	 */
-	public final Boolean getInviteRepas() {
-		return inviteRepas;
-	}
-
-	/**
-	 * @param inviteRepas the inviteRepas to set
-	 */
-	public final void setInviteRepas(Boolean inviteRepas) {
-		this.inviteRepas = inviteRepas;
 	}
 	
 	/**

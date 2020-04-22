@@ -112,23 +112,31 @@
                         </div>
                     </div>
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="repas">
-                      <label class="form-check-label" for="repasCheck1">invitation Repas</label>
+						<label for="exampleFormControlSelect1">Présent au repas :</label>
+						<select class="form-control" id="inviteRepas">
+						  <option>Oui</option>
+						  <option>Non</option>
+						</select>
+					  </div>
                     </div>
                     <br />
-                    <h2>Adresse du Domicile</h2>
-                    <div class="form-group">
-                        <label for="adresse">Adresse</label>
-                        <input type="text" class="form-control" id="inputAdresse" placeholder="Entrer l'adresse">
-                    </div>
-                    <div class="form-group">
-                        <label for="codePostal">Code Postal</label>
-                        <input type="number" class="form-control" id="inputCodePostal" placeholder="entrer le code postal">
-                    </div>
-                    <div class="form-group">
-                        <label for="ville">Ville</label>
-                        <input type="text" class="form-control" id="inputVille" placeholder="Entrer la ville">
-                    </div>
+					<h2>Adresse du Domicile</h2>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="adresse">Adresse</label>
+							<input type="text" class="form-control" id="inputAdresse" placeholder="Entrer l'adresse">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="codePostal">Code Postal</label>
+							<input type="number" class="form-control" id="inputCodePostal" placeholder="entrer le code postal">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="ville">Ville</label>
+							<input type="text" class="form-control" id="inputVille" placeholder="Entrer la ville">
+						</div>
+					</div>
                   <br /> 
                   <h2>Personne 2</h2>
                   <div class="form-row">

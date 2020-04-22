@@ -2,13 +2,6 @@ package fr.lsi.mariage.domain.model;
 
 import java.util.UUID;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
 import fr.lsi.mariage.domain.entiy.DomicileEntity;
 
 public class Domicile {
@@ -59,12 +52,49 @@ public class Domicile {
 	private Invite habitant5;
 
 	/**
+	 * présent au repas
+	 */
+	private Boolean presenceRepas;
+	
+	
+	/**
+	 * présent au Vin d'honneur
+	 */
+	private Boolean PresenceVin;
+	
+	/**
+	 * si il est invité au repas
+	 */
+	private Boolean inviteRepas;
+	
+	/**
+	 * table
+	 */
+	private String table;
+	
+	/**
+	 * réponse
+	 */
+	private Boolean reponse;
+	
+	/**
+	 * invitation expedier 
+	 */
+	private Boolean invitationExp;
+	
+	/**
+	 * commentaire personnalisé
+	 */
+	private String perso;
+
+	/**
 	 * Constructeur par défaut
 	 */
 	public Domicile() {
 		super();
 		UUID uuid = UUID.randomUUID();
 		this.setCodeUID(uuid.toString());
+		this.setInvitationExp(Boolean.FALSE);
 	}
 
 	/**
@@ -77,6 +107,13 @@ public class Domicile {
 		this.setCodeUID(domicile.getCodeUID());
 		this.setVille(domicile.getVille());
 		this.setHabitant1(new Invite(domicile.getHabitant1()));
+		this.setPresenceRepas(domicile.getPresenceRepas());
+		this.setPresenceVin(domicile.getPresenceVin());
+		this.setInviteRepas(domicile.getInviteRepas());
+		this.setTable(domicile.getTable());
+		this.setReponse(domicile.getReponse());
+		this.setInvitationExp(domicile.getInvitationExp());
+		this.setPerso(domicile.getPerso());
 		if (domicile.getHabitant2() != null) {
 			this.setHabitant2(new Invite(domicile.getHabitant2()));
 		}
@@ -216,6 +253,104 @@ public class Domicile {
 	 */
 	public void setHabitant5(Invite habitant5) {
 		this.habitant5 = habitant5;
+	}
+
+	/**
+	 * @return the presenceRepas
+	 */
+	public final Boolean getPresenceRepas() {
+		return presenceRepas;
+	}
+
+	/**
+	 * @param presenceRepas the presenceRepas to set
+	 */
+	public final void setPresenceRepas(Boolean presenceRepas) {
+		this.presenceRepas = presenceRepas;
+	}
+
+	/**
+	 * @return the presenceVin
+	 */
+	public final Boolean getPresenceVin() {
+		return PresenceVin;
+	}
+
+	/**
+	 * @param presenceVin the presenceVin to set
+	 */
+	public final void setPresenceVin(Boolean presenceVin) {
+		PresenceVin = presenceVin;
+	}
+
+	/**
+	 * @return the inviteRepas
+	 */
+	public final Boolean getInviteRepas() {
+		return inviteRepas;
+	}
+
+	/**
+	 * @param inviteRepas the inviteRepas to set
+	 */
+	public final void setInviteRepas(Boolean inviteRepas) {
+		this.inviteRepas = inviteRepas;
+	}
+
+	/**
+	 * @return the reponse
+	 */
+	public final Boolean getReponse() {
+		return reponse;
+	}
+
+	/**
+	 * @param reponse the reponse to set
+	 */
+	public final void setReponse(Boolean reponse) {
+		this.reponse = reponse;
+	}
+
+	/**
+	 * @return the table
+	 */
+	public final String getTable() {
+		return table;
+	}
+
+	/**
+	 * @param table the table to set
+	 */
+	public final void setTable(String table) {
+		this.table = table;
+	}
+
+	/**
+	 * @return the invitationExp
+	 */
+	public final Boolean getInvitationExp() {
+		return invitationExp;
+	}
+
+	/**
+	 * @param invitationExp the invitationExp to set
+	 */
+	public final void setInvitationExp(Boolean invitationExp) {
+		this.invitationExp = invitationExp;
+	}
+
+	/**
+	 * @return the perso
+	 */
+	public final String getPerso() {
+		return perso;
+	}
+
+	/**
+	 * @param perso the perso to set
+	 */
+	public final void setPerso(String perso) {
+		this.perso = perso;
 	}
 
 }

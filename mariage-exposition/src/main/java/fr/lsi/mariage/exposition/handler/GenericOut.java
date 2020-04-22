@@ -37,6 +37,13 @@ public class GenericOut {
 		this.setInformation(information);
 		this.setMessage(message);
 	}
+	
+	/**
+	 * Constructeur defaut
+	 */
+	public GenericOut() {
+		super();
+	}
 
 	/**
 	 * @return the message

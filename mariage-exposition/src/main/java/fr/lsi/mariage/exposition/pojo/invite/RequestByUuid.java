@@ -11,6 +11,12 @@ public class RequestByUuid {
 	private String uuid;
 	
 	/**
+	 * admin
+	 */
+	@JsonProperty("admin")
+	private String admin;
+	
+	/**
 	 * Constructeur par default
 	 */
 	public RequestByUuid() {
@@ -29,6 +35,20 @@ public class RequestByUuid {
 	 */
 	public final void setUuid(String uuid) {
 		this.uuid = uuid;
+	}
+
+	/**
+	 * @return the admin
+	 */
+	public final String getAdmin() {
+		return admin;
+	}
+
+	/**
+	 * @param admin the admin to set
+	 */
+	public final void setAdmin(String admin) {
+		this.admin = admin;
 	}
 	
 	

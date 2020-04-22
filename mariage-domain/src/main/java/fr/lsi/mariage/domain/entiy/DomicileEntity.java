@@ -66,6 +66,12 @@ public class DomicileEntity implements IoEntity {
 	private InviteEntity habitant3;
 
 	/**
+	 * invitation expedier 
+	 */
+	@Column(name = "invitation_exp")
+	private Boolean invitationExp;
+
+	/**
 	 * Habitant du domicile
 	 */
 	@OneToOne(cascade = {CascadeType.ALL})
@@ -78,6 +84,43 @@ public class DomicileEntity implements IoEntity {
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "habitant_cinq")
 	private InviteEntity habitant5;
+
+	/**
+	 * présent au repas
+	 */
+	@Column(name="presence_repas")
+	private Boolean presenceRepas;
+	
+	
+	/**
+	 * présent au Vin d'honneur
+	 */
+	@Column(name="presence_vin")
+	private Boolean PresenceVin;
+	
+	/**
+	 * si il est invité au repas
+	 */
+	@Column(name="invite_repas")
+	private Boolean inviteRepas;
+	
+	/**
+	 * réponse
+	 */
+	@Column(name="reponse")
+	private Boolean reponse;
+	
+	/**
+	 * table
+	 */
+	@Column(name="nom_table")
+	private String table;
+	
+	/**
+	 * commentaire personnalisé
+	 */
+	@Column(name="commentaire_perso")
+	private String perso;
 
 	/**
 	 * Constructeur par défaut
@@ -96,6 +139,13 @@ public class DomicileEntity implements IoEntity {
 		this.setCodeUID(domicile.getCodeUID());
 		this.setVille(domicile.getVille());
 		this.setHabitant1(new InviteEntity(domicile.getHabitant1()));
+		this.setPresenceRepas(domicile.getPresenceRepas());
+		this.setPresenceVin(domicile.getPresenceVin());
+		this.setTable(domicile.getTable());
+		this.setInviteRepas(domicile.getInviteRepas());
+		this.setReponse(domicile.getReponse());
+		this.setInvitationExp(domicile.getInvitationExp());
+		this.setPerso(domicile.getPerso());
 		if (domicile.getHabitant2() != null) {
 			this.setHabitant2(new InviteEntity(domicile.getHabitant2()));
 		}
@@ -235,6 +285,104 @@ public class DomicileEntity implements IoEntity {
 	 */
 	public void setHabitant5(InviteEntity habitant5) {
 		this.habitant5 = habitant5;
+	}
+
+	/**
+	 * @return the presenceRepas
+	 */
+	public Boolean getPresenceRepas() {
+		return presenceRepas;
+	}
+
+	/**
+	 * @param presenceRepas the presenceRepas to set
+	 */
+	public void setPresenceRepas(Boolean presenceRepas) {
+		this.presenceRepas = presenceRepas;
+	}
+
+	/**
+	 * @return the presenceVin
+	 */
+	public Boolean getPresenceVin() {
+		return PresenceVin;
+	}
+
+	/**
+	 * @param presenceVin the presenceVin to set
+	 */
+	public void setPresenceVin(Boolean presenceVin) {
+		PresenceVin = presenceVin;
+	}
+
+	/**
+	 * @return the inviteRepas
+	 */
+	public Boolean getInviteRepas() {
+		return inviteRepas;
+	}
+
+	/**
+	 * @param inviteRepas the inviteRepas to set
+	 */
+	public void setInviteRepas(Boolean inviteRepas) {
+		this.inviteRepas = inviteRepas;
+	}
+
+	/**
+	 * @return the reponse
+	 */
+	public Boolean getReponse() {
+		return reponse;
+	}
+
+	/**
+	 * @param reponse the reponse to set
+	 */
+	public void setReponse(Boolean reponse) {
+		this.reponse = reponse;
+	}
+
+	/**
+	 * @return the table
+	 */
+	public String getTable() {
+		return table;
+	}
+
+	/**
+	 * @param table the table to set
+	 */
+	public void setTable(String table) {
+		this.table = table;
+	}
+
+	/**
+	 * @return the invitationExp
+	 */
+	public Boolean getInvitationExp() {
+		return invitationExp;
+	}
+
+	/**
+	 * @param invitationExp the invitationExp to set
+	 */
+	public void setInvitationExp(Boolean invitationExp) {
+		this.invitationExp = invitationExp;
+	}
+
+	/**
+	 * @return the perso
+	 */
+	public String getPerso() {
+		return perso;
+	}
+
+	/**
+	 * @param perso the perso to set
+	 */
+	public void setPerso(String perso) {
+		this.perso = perso;
 	}
 
 }

@@ -30,15 +30,6 @@ public interface InviteInterface {
 	 */
 	ArrayList<Domicile> checkInviteSansAdresse();
 	
-	/**
-	 * Modification d'un invité
-	 * 
-	 * @param invite invite temporaire pour récupérer les informations
-	 * @param code le code d'autorisation
-	 * @return
-	 */
-	String modification(final Invite invite, final String code);
-	
 
 	
 	/**
@@ -63,5 +54,13 @@ public interface InviteInterface {
 	 * @throws MariageException 
 	 */
 	String modificationInvite(final Domicile domicile) throws MariageException;
+
+	/**
+	 * Suppression d'un groupe d'invité
+	 * 
+	 * @param uuid
+	 * @return
+	 */
+	void suppresion(String uuid);
 
 }

@@ -48,31 +48,6 @@ public class InviteEntity implements IoEntity {
 	private String surnom;
 	
 	/**
-	 * table choisie
-	 */
-	@Column(name="nom_table")
-	private String table;
-	
-	/**
-	 * présent au repas
-	 */
-	@Column(name="presenceRepas")
-	private Boolean presenceRepas;
-	
-	
-	/**
-	 * présent au Vin d'honneur
-	 */
-	@Column(name="PresenceVin")
-	private Boolean PresenceVin;
-	
-	/**
-	 * si il est invité au repas
-	 */
-	@Column(name="inviteRepas")
-	private Boolean inviteRepas;
-	
-	/**
 	 * Création de l'invite
 	 * 
 	 * @param nom nom de l'invite
@@ -97,13 +72,9 @@ public class InviteEntity implements IoEntity {
 	 */
 	public InviteEntity(final Invite invite) {
 		this.setCodeUID(invite.getCodeUID().toString());
-		this.setInviteRepas(invite.getInviteRepas());
 		this.setNom(invite.getNom());
 		this.setPrenom(invite.getPrenom());
-		this.setPresenceRepas(invite.getPresenceRepas());
-		this.setPresenceVin(invite.getPresenceVin());
 		this.setSurnom(invite.getSurnom());
-		this.setTable(invite.getTable());
 		this.setCodeEnregistrement(invite.getCodeEnregistrement());
 	}
 
@@ -147,62 +118,6 @@ public class InviteEntity implements IoEntity {
 	 */
 	public void setSurnom(String surnom) {
 		this.surnom = surnom;
-	}
-
-	/**
-	 * @return the table
-	 */
-	public String getTable() {
-		return table;
-	}
-
-	/**
-	 * @param table the table to set
-	 */
-	public void setTable(String table) {
-		this.table = table;
-	}
-
-	/**
-	 * @return the presenceRepas
-	 */
-	public Boolean getPresenceRepas() {
-		return presenceRepas;
-	}
-
-	/**
-	 * @param presenceRepas the presenceRepas to set
-	 */
-	public void setPresenceRepas(Boolean presenceRepas) {
-		this.presenceRepas = presenceRepas;
-	}
-
-	/**
-	 * @return the presenceVin
-	 */
-	public Boolean getPresenceVin() {
-		return PresenceVin;
-	}
-
-	/**
-	 * @param presenceVin the presenceVin to set
-	 */
-	public void setPresenceVin(Boolean presenceVin) {
-		PresenceVin = presenceVin;
-	}
-
-	/**
-	 * @return the inviteRepas
-	 */
-	public Boolean getInviteRepas() {
-		return inviteRepas;
-	}
-
-	/**
-	 * @param inviteRepas the inviteRepas to set
-	 */
-	public void setInviteRepas(Boolean inviteRepas) {
-		this.inviteRepas = inviteRepas;
 	}
 	
 	/**
